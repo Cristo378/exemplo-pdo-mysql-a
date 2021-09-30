@@ -18,23 +18,25 @@ $generos = $comando->fetchAll(PDO::FETCH_ASSOC);
         <title>Biblioteca</title>
     </head>
     <body>
-        <a href='insert.php'>Novo Gênero</a>
-        <table>
-            <tr>
-                <th>Id</th>
-                <th>Nome</th>
-                <th>&nbsp;</th>
-            </tr>
-            <?php foreach($generos as $g): ?>
-                <tr>
-                    <td><?= $g['id'] ?></td>
-                    <td><?= $g['nome'] ?></td>
-                    <td>
-                        <a href="update.php?id=<?= $g['id'] ?>">Editar</a> | 
-                        <a href="delete.php?id=<?= $g['id'] ?>">Remover</a>
-                    </td>
-                </tr>
-            <?php endforeach ?>
-        </table>
+        <main class="container">
+        <a class="btn btn-primary" href='insert.php'>Novo Gênero</a>
+                <table class "table">
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                    <?php foreach($generos as $g): ?>
+                        <tr>
+                            <td><?= $g['id'] ?></td>
+                            <td><?= $g['nome'] ?></td>
+                            <td>
+                                <a class="btn btn-segundary" href="update.php?id=<?= $g['id'] ?>">Editar</a> | 
+                                <a class="btn btn-danger" href="delete.php?id=<?= $g['id'] ?>">Remover</a>
+                            </td>
+                        </tr>
+                    <?php endforeach ?>
+                </table>
+            </main>
     </body>
 </html>

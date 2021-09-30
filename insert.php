@@ -15,13 +15,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     <head>
         <meta charset="utf-8">
         <title>Document</title>
-    </head>
+            </head>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <body>
+        <main class="container"
         <h1>Novo Gênero</h1>
         <form action="insert.php" method="post">
+            <div class=form-group">
             <label for="nome">Nome</label>
-            <input type="text" name="nome" />
-            <button type="submit">Salvar</button>
+            <input class="form-control" type="text" name="nome" />
+            </div>
+            <br />
+            <button class="btn btn-success" type="submit">Salvar</button>
         </form>
     </body>
 </html>
